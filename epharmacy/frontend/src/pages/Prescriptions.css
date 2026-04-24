@@ -1,0 +1,18 @@
+.presc-page { padding-top: 32px; padding-bottom: 60px; }
+
+.presc-upload {
+  padding: 28px; margin-top: 28px;
+}
+.presc-upload h3 { margin-bottom: 6px; }
+.presc-upload > p { font-size: 13px; color: var(--ink-soft); }
+
+.presc-list { display: flex; flex-direction: column; gap: 12px; }
+.presc-item {
+  display: flex; align-items: center; gap: 16px; padding: 18px 20px;
+}
+.pi-icon { font-size: 32px; flex-shrink: 0; }
+.pi-info { flex: 1; }
+.pi-name  { font-weight: 700; font-size: 15px; }
+.pi-date  { font-size: 13px; color: var(--ink-soft); margin-top: 3px; }
+.pi-notes { font-size: 13px; color: var(--teal-dark); margin-top: 4px; }
+.pi-right { display: flex; flex-direction: column; align-items: flex-end; }

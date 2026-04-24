@@ -1,0 +1,62 @@
+.med-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: transform .2s, box-shadow .2s;
+  text-decoration: none;
+  color: var(--ink);
+}
+.med-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--teal-mid); }
+
+/* Image area */
+.med-card-img {
+  position: relative;
+  background: var(--teal-light);
+  height: 160px;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.med-card-img img { width: 100%; height: 100%; object-fit: contain; padding: 12px; }
+.med-card-placeholder { font-size: 64px; }
+
+.med-discount {
+  position: absolute;
+  top: 10px; left: 10px;
+  background: var(--coral);
+  color: white;
+  font-size: 11px; font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 99px;
+}
+.med-rx {
+  position: absolute;
+  top: 10px; right: 10px;
+  background: var(--amber);
+  color: white;
+  font-size: 11px; font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 99px;
+}
+
+/* Body */
+.med-card-body { padding: 16px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.med-category  { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--teal); }
+.med-name      { font-family: var(--font-head); font-size: 1rem; font-weight: 700; line-height: 1.3; margin-top: 2px; }
+.med-salt      { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+.med-mfr       { font-size: 12px; color: #8ba8a5; }
+
+.med-price-row { display: flex; align-items: baseline; gap: 8px; margin-top: 10px; }
+.med-price     { font-size: 1.15rem; font-weight: 700; font-family: var(--font-head); color: var(--ink); }
+.med-mrp       { font-size: 12px; color: #aaa; text-decoration: line-through; }
+
+.med-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}

@@ -1,0 +1,92 @@
+.admin-page { padding-top: 32px; padding-bottom: 60px; }
+
+/* Tabs */
+.admin-tabs {
+  display: flex; flex-wrap: wrap; gap: 4px;
+  background: var(--mist); border-radius: var(--r-md);
+  padding: 4px; margin: 24px 0;
+}
+.admin-tabs button {
+  padding: 9px 18px; border: none; border-radius: calc(var(--r-md) - 2px);
+  font-weight: 600; font-size: 13px; color: var(--ink-soft);
+  background: transparent; cursor: pointer; transition: all .2s; white-space: nowrap;
+}
+.admin-tabs button.active { background: white; color: var(--teal); box-shadow: var(--shadow-sm); }
+
+.admin-content { margin-top: 4px; }
+.admin-tab-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 20px; flex-wrap: wrap; gap: 12px;
+}
+.admin-tab-header h3 { font-size: 1.1rem; }
+
+/* Stats grid */
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.stat-card {
+  padding: 24px; text-align: center;
+  transition: transform .2s, box-shadow .2s;
+}
+.stat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.sc-icon  { font-size: 36px; margin-bottom: 12px; }
+.sc-val   { font-size: 2rem; font-weight: 800; font-family: var(--font-head); color: var(--ink); }
+.sc-label { font-size: 13px; color: var(--ink-soft); margin-top: 4px; font-weight: 500; }
+
+/* Colored accents */
+.sc-teal   { border-top: 4px solid var(--teal); }
+.sc-blue   { border-top: 4px solid #3b82f6; }
+.sc-amber  { border-top: 4px solid var(--amber); }
+.sc-green  { border-top: 4px solid var(--green); }
+.sc-purple { border-top: 4px solid #8b5cf6; }
+.sc-gold   { border-top: 4px solid #f59e0b; }
+.sc-coral  { border-top: 4px solid var(--coral); }
+
+/* Filter pills */
+.filter-pills { display: flex; gap: 6px; }
+.filter-pill {
+  padding: 7px 16px; border: 2px solid var(--border); border-radius: 99px;
+  font-size: 13px; font-weight: 600; background: white; color: var(--ink-soft);
+  cursor: pointer; transition: all .15s;
+}
+.filter-pill.active { border-color: var(--teal); color: var(--teal); background: var(--teal-light); }
+
+/* Toggle label */
+.toggle-label {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 600; cursor: pointer; color: var(--ink-soft);
+}
+.toggle-label input { accent-color: var(--teal); width: 16px; height: 16px; }
+
+/* Prescriptions */
+.rx-list { display: flex; flex-direction: column; gap: 14px; }
+.rx-card { padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+.rx-info { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.rx-user { font-weight: 700; font-size: 15px; }
+.rx-date { font-size: 13px; color: var(--ink-soft); }
+.rx-file { }
+.rx-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+/* Bar chart */
+.bar-chart {
+  display: flex; align-items: flex-end; gap: 12px;
+  height: 200px; padding: 0 8px;
+}
+.bar-item {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 4px; flex: 1;
+}
+.bar-label  { font-size: 11px; font-weight: 700; color: var(--ink-soft); }
+.bar-track  { flex: 1; width: 100%; max-width: 48px; background: var(--mist); border-radius: var(--r-sm); overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; }
+.bar-fill   { background: linear-gradient(to top, var(--teal-dark), var(--teal)); border-radius: var(--r-sm); transition: height .6s ease; min-height: 4px; }
+.bar-month  { font-size: 11px; font-weight: 600; color: var(--ink); }
+.bar-orders { font-size: 10px; color: var(--ink-soft); }
+
+@media (max-width: 1024px) {
+  .stats-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .admin-tabs button { font-size: 12px; padding: 7px 12px; }
+}
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+}

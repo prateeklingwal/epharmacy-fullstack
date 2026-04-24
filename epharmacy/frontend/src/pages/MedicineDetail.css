@@ -1,0 +1,108 @@
+.med-detail { padding-top: 24px; padding-bottom: 60px; }
+.breadcrumb { font-size: 13px; color: var(--ink-soft); margin-bottom: 28px; }
+.breadcrumb a { color: var(--teal); }
+.breadcrumb a:hover { text-decoration: underline; }
+
+.med-detail-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+/* Image */
+.med-detail-img-wrap {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  height: 380px; overflow: hidden;
+  background: var(--teal-light);
+}
+.med-detail-img { max-height: 320px; object-fit: contain; }
+.med-detail-placeholder { font-size: 120px; }
+.md-badge-discount {
+  position: absolute; top: 16px; left: 16px;
+  background: var(--coral); color: white;
+  padding: 5px 12px; border-radius: 99px;
+  font-size: 13px; font-weight: 700;
+}
+
+/* Info */
+.med-detail-info { display: flex; flex-direction: column; gap: 16px; }
+.rx-alert {
+  background: #fff8e1; border: 1.5px solid var(--amber);
+  border-radius: var(--r-md); padding: 12px 16px;
+  font-size: 13px; font-weight: 500; color: #92400e;
+}
+.md-name { font-size: 2rem; font-weight: 800; margin-top: 4px; }
+.md-salt { color: var(--ink-soft); font-size: 15px; }
+
+/* Meta grid */
+.md-meta-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.md-meta-item { background: var(--mist); border-radius: var(--r-md); padding: 12px 16px; }
+.md-meta-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-soft); }
+.md-meta-val { display: block; font-weight: 600; margin-top: 4px; }
+.md-meta-val.low { color: var(--coral); }
+
+/* Description */
+.md-description { background: var(--mist); border-radius: var(--r-md); padding: 18px; }
+.md-description h4 { font-size: 14px; margin-bottom: 8px; font-weight: 700; }
+.md-description p  { font-size: 14px; color: var(--ink-soft); line-height: 1.7; }
+
+/* Price block */
+.md-price-block {
+  background: white;
+  border: 2px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 24px;
+  display: flex; flex-direction: column; gap: 20px;
+}
+.md-price-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.md-price { font-size: 2.2rem; font-weight: 800; font-family: var(--font-head); }
+.md-mrp   { color: #aaa; text-decoration: line-through; font-size: 15px; }
+
+.md-buy-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+
+/* Qty */
+.qty-control {
+  display: flex; align-items: center;
+  border: 2px solid var(--border); border-radius: var(--r-md); overflow: hidden;
+}
+.qty-control button {
+  background: var(--mist); border: none;
+  width: 42px; height: 42px;
+  font-size: 20px; font-weight: 600;
+  transition: background .15s;
+}
+.qty-control button:hover { background: var(--teal-light); }
+.qty-control span { min-width: 44px; text-align: center; font-weight: 700; font-size: 16px; }
+
+.btn.added { background: var(--green) !important; }
+
+.out-of-stock-msg {
+  background: #fff0f0; border: 2px solid #fecdcd;
+  border-radius: var(--r-md); padding: 14px 20px;
+  font-weight: 600; color: var(--coral);
+}
+
+/* Alternatives */
+.alternatives { margin-top: 56px; }
+.alternatives .section-title { margin-bottom: 8px; }
+.alt-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+.alt-card {
+  display: flex; align-items: center; gap: 16px;
+  padding: 16px 20px; transition: all .2s;
+  text-decoration: none; color: var(--ink);
+}
+.alt-card:hover { border-color: var(--teal); transform: translateX(4px); }
+.alt-icon { font-size: 32px; }
+.alt-info { flex: 1; }
+.alt-name  { font-weight: 700; font-size: 15px; }
+.alt-mfr   { font-size: 13px; color: var(--ink-soft); margin-top: 2px; }
+.alt-store { font-size: 12px; color: #8ba8a5; }
+.alt-price { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.alt-p     { font-size: 1.1rem; font-weight: 800; font-family: var(--font-head); }
+
+@media (max-width: 768px) {
+  .med-detail-grid { grid-template-columns: 1fr; }
+  .med-detail-img-wrap { height: 240px; }
+}
