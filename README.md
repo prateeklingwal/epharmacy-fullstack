@@ -273,3 +273,13 @@ cd frontend && npm run build
 # Serve the build/ folder with nginx or serve it from Express:
 # app.use(express.static(path.join(__dirname, '../frontend/build')))
 ```
+// to start the backend - first you need to go to the backend folder in the terminal 
+cd epharmacy/backend
+// the type the command 
+npm run dev
+
+// for the frontend - first you need to open another terminal and go to the frontend folder
+cd epharmacy/frontend
+// then type the command 
+npm start
+
